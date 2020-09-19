@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        html,
+        body {
+            padding: 15px;
+            margin: 0;
+        }
+
+        #timingfs label {
+            display: block;
+        }
+
+        #timeinput {
+            border: 1px solid #333;
+            display: inline-block !important;
+        }
+
+        #timeinput input {
+            border: none;
+            -moz-appearance: textfield;
+            width: 25px;
+            padding: 5px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #timeinput input:focus {
+            outline: none;
+        }
+
+        #timeinput input::-webkit-outer-spin-button,
+        #timeinput input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=submit] {
+            border: 1px solid #333;
+            background-color: transparent;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='container'>
+        <h1 style='text-align: center;'>Autowater beállítások</h1>
+        <form action='/change' method='GET'>
+            <fieldset id='timingfs'>
+                <legend>
+                    <h3 style='margin:0'>Időzítés</h3>
+                </legend>
+                Időpont: <label id='timeinput'>
+                    <input type='number' min='0' max='23' name='wh' required value='11'> :
+                    <input type='number' min='0' max='59' name='wm' required value='1'>
+                </label>
+                <label>
+                    <input type='checkbox' name='day' value='1' checked>
+                    Hétfő
+                </label>
+                <label>
+                    <input type='checkbox' name='day' value='2' checked>
+                    Kedd
+                </label>
+                <label>
+                    <input type='checkbox' name='day' value='3' checked>
+                    Szerda
+                </label>
+                <label>
+                    <input type='checkbox' name='day' value='4' checked>
+                    Csütörtök
+                </label>
+                <label>
+                    <input type='checkbox' name='day' value='5' checked>
+                    Péntek
+                </label>
+                <label>
+                    <input type='checkbox' name='day' value='6' checked>
+                    Szombat
+                </label>
+                <label>
+                    <input type='checkbox' name='day' value='7' checked>
+                    Vasárnap
+                </label>
+                <label>
+                    Öntözés hossza:
+                    <input style='width: 60px;' type='number' name='wtime' value='10' step='0.5' min=0 max=3600>
+                    másodperc
+                </label>
+                <input type='submit' value='Mentés'>
+            </fieldset>
+        </form>
+        <form action='/change' method='GET'>
+            <fieldset>
+                <legend>
+                    <h3 style='margin:0'>WiFi</h3>
+                </legend>
+
+                <p style='margin: 3px 0;'>Csatlakozás ehhez a WiFi-hez:</p>
+                <table>
+                    <tr>
+                        <td>
+                            <label for='ssid'>SSID:</label>
+                        </td>
+                        <td>
+                            <input type='text' id='ssid'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='pwd'>Jelszó:</label>
+                        </td>
+                        <td>
+                            <input type='password' placeholder='***'>
+                        </td>
+                    </tr>
+                </table>
+                <input type='submit' value='Csatlakozás'>
+
+            </fieldset>
+        </form>
+        <footer style='text-align: center;'>&copy; 2020 Tóth Ambrus, <a href='https://johetajava.hu' target='_blank'>Jöhet a Java</a></footer>
+    </div>
+
+</body>
+
+</html>

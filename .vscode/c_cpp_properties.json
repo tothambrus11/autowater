@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:\\Users\\User\\Documents\\Arduino\\libraries\\NTPClient",
+                "C:\\Users\\User\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\**",
+                "C:\\Users\\User\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.3.0\\**",
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "C:\\Users\\User\\Documents\\Arduino\\libraries\\Time",
+                    "C:\\Users\\User\\Documents\\Arduino\\libraries\\Chrono",
+                    "C:\\Users\\User\\Documents\\Arduino\\libraries\\NTPClient",
+                    "C:\\Users\\User\\Documents\\Arduino\\libraries\\RTClib",
+                    "C:\\Users\\User\\Documents\\Arduino\\libraries\\eeprom_read_write_anything",
+                    "C:\\Users\\User\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.3.0\\libraries\\**",
+                    "C:\\Users\\User\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.3.0\\**",
+                    "./"
+                ]
+            },
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "clang-x64",
+            "forcedInclude": []
+        }
+    ],
+    "version": 4
+}
